@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App</title>
+  {{>style}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  {{>header}}
+  <img src="https://www.kindpng.com/picc/m/178-1780574_weather-forecast-icon-png-transparent-png.png" alt="" srcset="">
+  <form class="d-flex" role="search">
+    <input id="in" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button id="btn" class="btns btn btn-outline-success " type="submit">Search</button>
+            </form>
+    
+<div id="info" class="info">
+      <div class=" card text-center one">
+      <div class="card-header one">
+
+      </div>
+      <div class="card-body one">
+        <h5 id="ht" class="card-title one"></h5>
+        <p class="card-text one" id="p1"></p>
+        <p class="card-text one" id="p2"></p>
+        <p class="card-text one" id="p3"></p>
+        
+
+      </div>
+      </div>
+      </div>
+
+       {{>script}}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

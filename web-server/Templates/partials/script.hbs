@@ -1,0 +1,65 @@
+<script>
+  console.log('client side')
+
+
+  const weatherform = document.querySelector('form');
+  const loc = document.querySelector('input');
+
+  const card = document.getElementById('info')
+  const button = document.getElementById('btn')
+  button.addEventListener('click', () => {
+    card.style.visibility = 'visible';
+  })
+
+
+  weatherform.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const address = loc.value
+    const weather_element = document.querySelector('#title')
+
+    const title = document.querySelector('h5');
+    const temp1 = document.querySelector('#p1');
+    const temp2 = document.querySelector('#p2');
+    const temp3 = document.querySelector('#p3');
+
+
+      fetch('http://localhost:3000/weather?address=' + address).then((response) => {
+        response.json().then((data) => {
+
+         if(data.error){
+           title.textContent = data.error
+           temp1.textContent = ""
+          temp2.textContent = ""
+          temp3.textContent = ""
+         }
+else{
+          title.textContent = data.location
+          temp1.textContent = data.location + "," + data.region + "," + data.country + "."
+          temp2.textContent = data.weather
+          temp3.textContent = data.temp+"°C"
+}
+        })
+          
+      })
+   
+
+
+   
+    })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
