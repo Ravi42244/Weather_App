@@ -6,8 +6,8 @@ const port = process.env.PORT || 3000
 const pubpath = path.join(__dirname, '../public')
 const viewpath = path.join(__dirname, '../Templates/views')
 const partialspath = path.join(__dirname, '../Templates/partials')
-const webapp = require('../../web-app/utils/weather_api')
-const weather_api = require('../../web-app/utils/weather_api')
+const webapp = require('.weather_api')
+
 
 app.set('view engine', 'hbs')
 app.set('views', viewpath)
