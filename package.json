@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./web-server/src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ravi42244/Weather_App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ravi42244/Weather_App/issues"
+  },
+  "homepage": "https://github.com/Ravi42244/Weather_App#readme"
+}
